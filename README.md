@@ -15,10 +15,13 @@ in this project i well use html css botstrap js for fornt end and for back end i
 
 ## TODO
 
+I keep these todo to remind me of my path
+
 - [x] init github ropesitory
 - [x] bootstrap
 - [x] Django
 - [x] personal web page property
-- [ ] use name for website
-- [ ] site template
+- [x] use name for website
+- [x] site template
+- [ ] form's
 - [ ] Multilingual site

@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ورود به حساب کاربری</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+  <form class="box" method="post">
+    {% csrf_token %}
+    <h1>وارد شدن</h1>
+    <input type="text" name="usr_name" placeholder="نام کاربری">
+    <input type="password" name="passwd" placeholder="کلمه عبور">
+    <input type="submit" name="login" value="وارد شو">
+  </form>
+</body>
+
+</html>

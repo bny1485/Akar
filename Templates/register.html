@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ساخت حساب کاربری</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+</head>
+
+<body>
+
+  <div">
+    <form class="box" method="post">
+      {% csrf_token %}
+      <h1>ساخت حساب کاربری</h1>
+      {{ form }}
+      <input type="submit" name="login" value="وارد شو">
+    </form>
+  </div>
+
+  <!-- <form class="box" method="post">
+    {% csrf_token %}
+    <h1>ساخت حساب کاربری</h1>
+    <h1>با اچ‌تی‌ام‌ال</h1>
+    <input type="text" name="usr_name" placeholder="نام کاربری">
+    <input type="email" name="email" placeholder="ایمیل شما">
+    <input type="password" name="passwd" placeholder="کلمه عبور">
+    <input type="password" name="passwd" placeholder="تایید کلمه عبور">
+    <input type="submit" name="login" value="وارد شو">
+  </form> -->
+
+</body>
+
+</html>
