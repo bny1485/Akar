@@ -13,8 +13,7 @@
   <form class="box" method="post">
     {% csrf_token %}
     <h1>وارد شدن</h1>
-    <input type="text" name="usr_name" placeholder="نام کاربری">
-    <input type="password" name="passwd" placeholder="کلمه عبور">
+    {{ form }}
     <input type="submit" name="login" value="وارد شو">
   </form>
 </body>

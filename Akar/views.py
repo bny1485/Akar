@@ -1,22 +1,38 @@
-from django.shortcuts import render
+from django.contrib.auth import authenticate, login, get_user_model
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .forms import RegisterForm
+from .forms import RegisterForm, LoginForm
 
 
-def register_function(request):
-    if request.method == "POST":
-        Form = RegisterForm(request.POST)
-    else:
-        Form = RegisterForm()
+USER = get_user_model()
+def register_def(request):
+    Form = RegisterForm(request.POST or None)
+    if Form.is_valid():
+        print(Form.cleaned_data)
+        USR_NAME = Form.cleaned_data.get("usr_name")
+        EMAIL = Form.cleaned_data.get("email")
+        PASSWD = Form.cleaned_data.get("passwd")
+        new_user = USER.objects.create_user(username=USR_NAME, email=EMAIL, password=PASSWD)
+        print(f'++++ new user : {new_user}')
+
     return render(request, 'register.html', {'form': Form})
 
 
-def login(request):
-    if request.method == "POST":
-        print(request.POST.get("usr_name"))
-        print(request.POST.get("passwd"))
+def login_def(request):
+    Form = LoginForm(request.POST or None)
+    context = {"form": Form}
+    if Form.is_valid():
+        USR_NAME = Form.cleaned_data.get("usr_name")
+        PASSWD = Form.cleaned_data.get("passwd")
+        user = authenticate(request, username=USR_NAME, password=PASSWD)
+        if user is not None:
+            login(request, user)
+            context['form'] = LoginForm()
+            return redirect("/about-me")
+        else:
+            print("user is None.\nI am in else")
 
-    return render(request, 'login.html', {})
+    return render(request, 'login.html', context)
 
 
 def home_page(request):

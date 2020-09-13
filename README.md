@@ -23,5 +23,7 @@ I keep these todo to remind me of my path
 - [x] personal web page property
 - [x] use name for website
 - [x] site template
-- [ ] form's
+- [x] form's
+- [x] set login and register
 - [ ] Multilingual site
+- [ ] brutefurce attack 

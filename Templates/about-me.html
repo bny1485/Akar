@@ -39,7 +39,7 @@
         </div>
     </div>
 
-
+    {% if request.user.is_authenticated %}
     <div class="container-fluid main-container">
 
         <div class="card" id="about-me-card">
@@ -49,12 +49,12 @@
                     <p class="card-text">
                         Hi there I am {{ name }} my last name is {{ last_name }}
                         and you can contact me whit my Email address {{ Email }}
-                    </p>    
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-
+    {% endif %}
 
     <div class="blockquote-footer footer">
         <p>this is footer of about me</p>
