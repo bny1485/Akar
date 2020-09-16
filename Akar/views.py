@@ -12,8 +12,7 @@ def register_def(request):
         USR_NAME = Form.cleaned_data.get("usr_name")
         EMAIL = Form.cleaned_data.get("email")
         PASSWD = Form.cleaned_data.get("passwd")
-        new_user = USER.objects.create_user(username=USR_NAME, email=EMAIL, password=PASSWD)
-        print(f'++++ new user : {new_user}')
+        USER.objects.create_user(username=USR_NAME, email=EMAIL, password=PASSWD)
 
     return render(request, 'register.html', {'form': Form})
 

@@ -11,66 +11,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>خانه</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <title>card my orginal template</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/card.css' %}">
 </head>
 
 <body>
 
-    <div class="header-container">
-        <div class="header">
-            <div class="container">
-                <h1 class="display-4">Akar | ئاکار</h1>
-
-                <div class="social">
-                    <a href="#">instagram</a>
-                </div>
-
-
-            </div>
-
-            <div class="container">
-                <ul>
-                    <li><a href="#">خانه</a></li>
-                    <li><a href="#">خانه</a></li>
-                    <li><a href="#">خانه</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="navbar">
+        <h1>I use this div as nav bar</h1>
     </div>
 
     <div class="container-fluid main-container">
-        dose it work ? first
 
+        <br>
+        {% for obj in object_list %}
         <div class="my-home-card card">
-            <img class="card-img-top" src="../static/Pictuer/starwars.jpg" alt="Card image cap">
+            <!-- style="width: 18rem;" -->
+            <img class="card-img-top" src="{{ obj.image.url }}" alt="Card image cap">
             <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted">{{ obj.date }} ,{{ obj.time }} ,writer</h6>
                 <h5 class="card-title">{{ obj.title }}</h5>
                 <p class="card-text">{{ obj.description }}</p>
-                <a href="#" class="btn btn-block btn-dark">Go somewhere</a>
+                <a href="/post-detail/{{ obj.id }}" class="btn btn-block btn-dark">Go somewhere</a>
             </div>
         </div>
         <br>
-        <!-- {% for obj in object_list %}
-        dose it work ? second 
-        <div class="my-home-card card">
-            <img class="card-img-top" src="../static/Pictuer/starwars.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">{{ obj.date }} ,{{ obj.time }} ,writer</h6>
-                <h5 class="card-title">{{ obj.title }}</h5>
-                <p class="card-text">{{ obj.description }}</p>
-                <a href="#" class="btn btn-block btn-dark">Go somewhere</a>
-            </div>
-        </div>
-        <br>
-        {% endfor %} -->
+        {% endfor %}
 
     </div>
 
-    <div class="blockquote-footer footer">
-        <p>copyleft</p>
-        <a href="https://github.com/bny1485/Akar">github repo of this site</a>
+    <div class="footer">
+        <h1>I use this div footer for sociel media</h1>
     </div>
 
 

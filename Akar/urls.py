@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import home_page, about_me_page, login_def, register_def
+from myPost.views import my_post_detail_view, my_post_list_view
 
 
 urlpatterns = [
@@ -24,4 +25,7 @@ urlpatterns = [
     path('about-me/', about_me_page),
     path('login/', login_def),
     path('register/', register_def),
+
+    path('post-list', my_post_list_view.as_view()),
+    path('post-detail/<pk>', my_post_detail_view.as_view())
 ]

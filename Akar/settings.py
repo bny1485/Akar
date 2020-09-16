@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # --- my applications
+    'myPost'
 ]
 
 MIDDLEWARE = [
@@ -121,4 +123,10 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+]
+
+MEDIA_URL = '/media/'
+
+MEDIA_DIRS = [
+    BASE_DIR / "media",
 ]

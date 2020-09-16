@@ -66,9 +66,14 @@ li a:hover {
 }
 
 .main-container {
-    background-color: #f2f2f2;
+    background-color: #d0ccff;
 }
 
 .footer {
     background-color: #202035;
+}
+
+.my-home-card {
+    width: 18rem;
+    text-align: right;
 }

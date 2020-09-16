@@ -31,14 +31,16 @@ class RegisterForm(forms.Form):
 
         email_qs = USER.objects.filter(email=EMAIL)
         if email_qs.exists():
-            raise forms.ValidationError("ایمیل وارد شده قبل اسفاده شده است شما می‌توانید حساب کاربری خود را در لینک زیر باز یابی کیند")
+            raise forms.ValidationError(
+                "ایمیل وارد شده قبل اسفاده شده است شما می‌توانید حساب کاربری خود را در لینک زیر باز یابی کیند")
 
         return USR_NAME
         return data
         return EMAIL
-        
+
+
 class LoginForm(forms.Form):
-    usr_name = forms.CharField(widget=forms.TextInput(
+    usr_name = forms.CharField(label='', widget=forms.TextInput(
         attrs={"placeholder": "نام کاربری"}))
-    passwd = forms.CharField(widget=forms.PasswordInput(
+    passwd = forms.CharField(label='', widget=forms.PasswordInput(
         attrs={"placeholder": "رمز عبور"}))

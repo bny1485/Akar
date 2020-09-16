@@ -26,4 +26,5 @@ I keep these todo to remind me of my path
 - [x] form's
 - [x] set login and register
 - [ ] Multilingual site
-- [ ] brutefurce attack 
+- [ ] brutefurce attack
+- [ ] split post in home 
