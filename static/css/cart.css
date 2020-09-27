@@ -1,0 +1,18 @@
+body {
+    background-color: rgba(25,25,25,1);
+    direction: rtl;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: samim, sans-serif;
+}
+.main-container {
+    min-height: 40vh;
+    margin: 4vh auto;
+    background-color: #d0ccff;
+}
+
+.my-home-card {
+    width: 83.3%;
+    text-align: right;
+}

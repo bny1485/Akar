@@ -13,6 +13,8 @@
 
     <title>درباره من</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/about-me.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-samim.css' %}">
+
 </head>
 
 
@@ -22,46 +24,87 @@
         <div class="container header">
             <div class="container-fluid">
                 <div class="container">
-                    <h1 class="display-4 ">ئاکار</h1>
-                    <p class="lead ">این سایت شخصی من است که درون این سایت محتویات امنیت سایبری مثل تحلیل انواع بدآفزار
-                        وتست های
-                        تفو‌ در اون قرارمیدم این سایت شخصرارمیدم.</p>
-                    <hr>
-                    <nav id="nav-bar">
-                        <ul>
-                            <li><a href="#">خانه</a></li>
-                            <li><a href="#">درباره من</a></li>
-                            <li><a href="#">وارد شوید</a></li>
-                        </ul>
-                    </nav>
+                    <h1 class="display-3">ئاکار</h1>
+                    <p class="lead ">این سایت شخصی برای خودم هست که در اینده به عنوان سایت اصلی و امروز به عنوان رزومه از اون استفاده می‌کنم.</p>
+                    <br><br>
                 </div>
             </div>
         </div>
     </div>
 
-    {% if request.user.is_authenticated %}
-    <div class="container-fluid main-container">
+    <div class="container main-container">
+        <div class="slideshow">
 
-        <div class="card" id="about-me-card">
-            <div class="card post-card" style="width: 18rem;">
-                <img class="card-img-top" src="../static/css/starwars.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">
-                        Hi there I am {{ name }} my last name is {{ last_name }}
-                        and you can contact me whit my Email address {{ Email }}
-                    </p>
+            <div class="clip clip1">
+                <div class="content">
+                    <p>سلام اسم من  {{ name }} نام خوانوادگی {{ last_name }} و اینمل من هست  {{ Email }}</p>
                 </div>
+            </div>
+            <div class="clip clip2 ">
+                <div class="content">
+                    <p>متن دوم برای پیام دوم چیزی به ‌‌ذهنم نمی‌رسه و اگه می‌رسید الان داستنش رو می گفتم مطمئن باش راست
+                        می ‌گم</p>
+                </div>
+            </div>
+
+        </div>
+        <p>
+            قصه سنگ کوچولو
+
+            یک سنگ کوچولو وسط کوچه ای افتاده بود. هرکسی از کوچه رد ميشد، لگدی به سنگ میزد و پرتش میکرد یک گوشه ی ديگر.
+            سنگ کوچولو خيلي غمگین بود. تمام بدنش درد میکرد. هرروز از گوشه ای به گوشه ای می افتاد و تکه هایی از بدنش کنده
+            ميشد. سنگ کوچولو اصلا حوصله نداشت. دلش می خواست از سر راه مردم کنار برود و در گوشه ای مخفی شود تا کسی او را
+            نبیند و به او لگد نزند.
+
+            یک روز مردی با یک وانت پر از هندوانه از راه رسید. وانت را کنار کوچه گذاشت و توی بلندگوی دستیش داد زد: «
+            هندونه ی قرمز و شیرین دارم. هندونه به شرط کارد. ببین و ببر.» مردم هم آمدند و هندوانه ها راخریدند و بردند.
+            مرد تمام هندوانه ها را فروخت. فقط یک هندوانه کوچک براي خود باقی ماند. مرد نگاهی به روی زمین و زیر پایش
+            انداخت. چشمش به سنگ کوچولو افتاد. آنرا برداشت و طوری کنار هندوانه گذاشت که موقع حرکت، هندوانه حرکت نکند و قل
+            نخورد. بعد هم با ماشین بسوی رودخانه ای بیرون شهر رفت. کنار رودخانه ایستاد، سنگ کوچولو را برداشت و درون آب
+            رودخانه انداخت. بعد هم هندوانه را پاره کرد و کنار رودخانه نشست و آنرا خورد و سوار وانت شد و حرکت کرد و رفت.
+            سنگ کوچولوی قصه ی ما توی رودخانه بود و از اینکه ديگر توی آن کوچه ی پرسروصدا نیست و کسی لگدش نمی زند، شادمان
+            بود و خدا را شکر میکرد .
+            روزها گذشت. فصل تابستان رفت و پائیز و بعد هم زمستان آمدند و رفتند. سنگ کوچولو همان جا کف رودخانه افتاده بود.
+            گاهی جریان آب وی را اندکی جا به جا میکرد و این جابجایی تن کوچک وی را به حرکت وامی داشت. او روی سنگ های ديگر
+            می غلتید و ناهمواری های روی بدنش از بین میرفتند . وی آرام آرام به یک سنگ صاف و صیقلی تبدیل شد.
+
+            یک روز تعدادی پسر بچه همراه معلمشان به کنار رودخانه آمدند تا سنگها را ببینند. آن ها می خواستند بدانند به چه
+            دلیل سنگ های کف رودخانه صاف هستند. یکی از آن ها سنگ کوچولوی قصه ی ما را مشاهده کرد. آنرا برداشت و به منزل
+            برد. آنرا رنگ زد و برایش صورت و زلف و لباس کشید. سنگ کوچولو به صورت یک آدمک بامزه در آمد. پسرک سنگ را که
+            اکنون شکل جدیدی پیدا کرده بود به مادرش نشان داد. مامان از آن خوشش آمد. یک تکه روبان قرمز به سنگ کوچولو بست و
+            آنرا به دیوار اتاق خواب پسرک آویزان کرد. اکنون سنگ کوچولوی داستان ی ما روی دیوار اتاق پسرک آویزان است و ديگر
+            نگران لگد خوردن و پرتاب شدن به بین کوچه نیست. پسری هم که او را به صورت عروسک درآورده، هرروز نگاهش ميکند و او
+            را خيلي دوست دارد.
+        </p>
+    </div>
+
+    <div class="footer">
+        <div class="custom-shape-divider-bottom-1600875552">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="massege">
+            this massege container
+        </div>
+        <div class="sm-bg container-fluid">
+            <div class="sm">
+                <a href="http://www.t.me/bny1485"><i class="fab fa-telegram"></i></a>
+                <a href="https://twitter.com/Bny1485"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/bny1485/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UC8txdWJi1FtHjztchDCsIVg?view_as=subscriber"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="mailto:benyaminmahmoudyan@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+989109667550"><i class="fa fa-phone"></i></a>
+    
             </div>
         </div>
     </div>
-    {% endif %}
 
-    <div class="blockquote-footer footer">
-        <p>this is footer of about me</p>
-    </div>
+    <!-- this is for sm action -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "

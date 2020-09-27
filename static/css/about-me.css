@@ -1,13 +1,17 @@
 body {
+    color: rgb(151, 148, 148);
     margin: 0px;
     padding: 0px;
     direction: rtl;
     text-align: right;
     background-color: rgba(25,25,25,1);
+    font-family: samim, sans-serif;
+    box-sizing: border-box;
+
+    line-height: 5vh;
 }
 
 .header-container {
-    color: seashell;
     padding-top: 9vh;
 }
 
@@ -38,18 +42,149 @@ li a {
 
 li:hover {
     border-bottom-style: solid;
-    border-color: #FF5733;
+    border-color: #6ab04c;
 }
 
 li a:hover {
     text-decoration: none;
-    color:  #FF5733 ;
+    color:  #6ab04c ;
 }
 
 .main-container {
-    background-color: #f2f2f2;
+    margin-bottom: 19vh;
 }
 
-.footer {
-    background-color: #202035;
+.slideshow {
+    color: snow;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 9vh;
+    display: flex;
+    height: 100vh;
+}
+
+.slideshow .clip {
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.slideshow .clip.clip1 {
+    background-image: url('../Pictuer/wall_e_robot-wallpaper-3840x2160.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 78% 0, 37% 100%, 0% 100%);
+}
+
+
+.slideshow .clip.clip2 {
+    background-image: url('../Pictuer/pexels-mike-171183.jpg');
+    background-size: cover;
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 37% 100%);
+}
+
+.slideshow:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.slideshow .clip:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.slideshow .clip .content {
+    background-color: rgba(46, 43, 43, 0.9);
+    position: absolute;
+    bottom: -100%;
+    right: 0;
+    width: 60%;
+    transition: 0.8s;
+    padding: 2vh 2vh 0 1vh;
+    margin: 0;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.slideshow .clip:hover .content {
+    opacity: 1;
+    bottom: 0;
+}
+
+
+.custom-shape-divider-bottom-1600875552 {
+    position: relative;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1600875552 svg {
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 99px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1600875552 .shape-fill {
+    fill: #061E22;
+}
+
+.massege {
+    min-height: 40vh;
+    background-color: #061e22;
+
+}
+
+.sm-bg {
+    background-color: #061e22;
+    height: 45vh;
+    text-align: center;
+}
+
+
+.sm a{
+    display: inline-block;
+    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #6ab04c;
+    margin: 0 16px;
+    transition: .4s linear;
+    position: relative;
+    top: 10%;
+}
+
+.sm a::before, .sm a::after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .4s linear;
+}
+
+.sm a:hover{
+    transform: scale(.8);
+}
+
+.sm a:hover::before{
+    border-left: 4px solid;
+    border-right: 4px solid;
+    transform: skewX(-20deg);
+}
+
+.sm a:hover::after{
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    transform: skewY(20deg);
 }

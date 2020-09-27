@@ -1,13 +1,13 @@
 from django import forms
 from django.contrib.auth import get_user_model
 
+
+
 USER = get_user_model()
-
-
 class RegisterForm(forms.Form):
     usr_name = forms.CharField(label="", widget=forms.TextInput(
         attrs={"placeholder": "نام کاربری"}))
-    email = forms.EmailField(label="", widget=forms.TextInput(
+    email = forms.EmailField(label="", widget=forms.EmailInput(
         attrs={"placeholder": "ایمیل"}))
     passwd = forms.CharField(min_length=8, label="", widget=forms.PasswordInput(
         attrs={'placeholder': "رمز عبور"}))
@@ -15,7 +15,6 @@ class RegisterForm(forms.Form):
         attrs={"placeholder": "تایید رمز عبور"}))
 
     def clean(self):
-        data = self.cleaned_data
         PASSWD = self.cleaned_data.get('passwd')
         USR_NAME = self.cleaned_data.get("usr_name")
         EMAIL = self.cleaned_data.get("email")
@@ -34,9 +33,6 @@ class RegisterForm(forms.Form):
             raise forms.ValidationError(
                 "ایمیل وارد شده قبل اسفاده شده است شما می‌توانید حساب کاربری خود را در لینک زیر باز یابی کیند")
 
-        return USR_NAME
-        return data
-        return EMAIL
 
 
 class LoginForm(forms.Form):
@@ -44,3 +40,5 @@ class LoginForm(forms.Form):
         attrs={"placeholder": "نام کاربری"}))
     passwd = forms.CharField(label='', widget=forms.PasswordInput(
         attrs={"placeholder": "رمز عبور"}))
+    email = forms.EmailField(label="", widget=forms.EmailInput(
+        attrs={"placeholder": "ایمیل"}))

@@ -11,6 +11,7 @@ in this project i well use html css botstrap js for fornt end and for back end i
     bootstrp v4
     html v5
     css v3
+    requirement.txt
 
 
 ## TODO
@@ -25,6 +26,11 @@ I keep these todo to remind me of my path
 - [x] site template
 - [x] form's
 - [x] set login and register
+- [ ] ddos attack
+- [ ] use dynamic tags
 - [ ] Multilingual site
 - [ ] brutefurce attack
 - [ ] split post in home 
+- [ ] More beautiful and efficient
+- [ ] get email varification
+- [ ] show image true
