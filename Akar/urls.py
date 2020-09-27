@@ -26,7 +26,7 @@ urlpatterns = [
     path('cv/', CV),
     path('login/', login_def),
     path('register/', register_def),
-    path('Album', Album),
+    path('album', Album),
     path('post-list', Post_list.as_view()),
     path('post-detail/<pk>', Post_detail.as_view())
 ]

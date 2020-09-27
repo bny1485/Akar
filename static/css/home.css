@@ -131,7 +131,7 @@ li a:hover {
 }
 
 .main-container {
-    flex-flow: row wrap;
+    display: inline-flex;
 }
 
 .my-home-card {

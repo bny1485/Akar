@@ -1,3 +1,13 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -5,6 +15,9 @@
   background-color: #fff;
 }
 @media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
   .jumbotron {
     padding-top: 6rem;
     padding-bottom: 6rem;

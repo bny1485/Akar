@@ -1,6 +1,4 @@
 {% load static %}
-
-
 <!DOCTYPE html>
 <html dir="rtl" lang="fa">
 
@@ -77,22 +75,19 @@
     </div>
     <br>
     <div class="container-fluid main-container">
-
-        <div class="container">
-            {% for item in qs %}
-                <div class="my-home-card card">
-                    <img class="card-img-top" src="{{ qs.image.url }}"alt="card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">{{ qs.date }} ,{{ qs.time }} ,writer</h6>
-                        <h5 class="card-title">{{ qs.title }}  </h5>
-                        <p class="card-text">{{ qs.description }}</p>
-                        <a href="#" class="btn btn-block btn-dark">Go somewhere</a>
-                    </div>
-                </div>
-            {% endfor %}
+        {% for item in qs %}
+        <div class="my-home-card card">
+            <img class="card-img-top" src="{{ qs.image }}" alt="card image cap">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">{{ qs.date }} ,{{ qs.time }} ,writer</h6>
+                <h5 class="card-title">{{ qs.title }}  </h5>
+                <p class="card-text">{{ qs.description }}</p>
+                <a href="#" class="btn btn-block btn-dark">Go somewhere</a>
+            </div>
         </div>
-
+        {% endfor %}
     </div>
+    
     <br>
     <br>
 
@@ -132,8 +127,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Optional JavaScript
+    jQuery first, then Popper.js, then Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
         crossorigin="anonymous "></script>
@@ -142,7 +137,7 @@
         crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV "
-        crossorigin="anonymous "></script>
+        crossorigin="anonymous "></script> -->
 </body>
 
 </html>
