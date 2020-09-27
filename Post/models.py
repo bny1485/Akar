@@ -15,6 +15,7 @@ def image_name(instance, filename):
 
 
 class Post(models.Model):
+    """ resposible for my post  """
     date = models.DateField()
     time = models.TimeField(auto_now=False)
     title = models.CharField(max_length=50)

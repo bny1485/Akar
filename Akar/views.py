@@ -2,11 +2,11 @@ from django.contrib.auth import authenticate, login, get_user_model
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import RegisterForm, LoginForm
-from Post.models import Post as MyPost 
-
+from Post.models import Post as MyPost
 
 
 def home(request):
+    """ This function is responsible for home page """
     my_post = MyPost.objects.all()
     context = {
         "qs": my_post
@@ -57,6 +57,7 @@ def login_def(request):
 
 
 def about_me(request):
+    """ This function is responsible for about me page """
     programmer = {
         "name": "Benyamin",
         "last_name": "Mahmoudyam",
@@ -67,8 +68,12 @@ def about_me(request):
 
 # TODO Efficient design
 def CV(request):
+    """ This function is responsible for CV """
     return render(request, 'CV.html')
 
 
 def Album(request):
-    return render(request,'Album.html')
+    """ This function show all my post """
+    my_post = MyPost.objects.all()
+    context = {"qs": my_post}
+    return render(request, 'Album.html')
