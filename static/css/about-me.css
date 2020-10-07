@@ -15,9 +15,18 @@ body {
     padding-top: 9vh;
 }
 
+.header-container h1 {
+    margin: 10vh auto;
+}
+
+.header-container h1 a:hover {
+    text-decoration: none;
+
+}
+
+
 ul {
     height: 8vh;
-    background-color: #333;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -37,17 +46,16 @@ li a {
     height: 100%;
     display: block;
     text-decoration: none;
-    color: rgb(32, 30, 30);
+    color: snow;
 }
 
-li:hover {
-    border-bottom-style: solid;
-    border-color: #6ab04c;
-}
 
 li a:hover {
-    text-decoration: none;
     color:  #6ab04c ;
+    text-decoration: underline;
+    text-underline-offset: 1em;
+    text-decoration-thickness: 0.2em;
+    color: #6ab04c ;
 }
 
 .main-container {

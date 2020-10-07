@@ -24,8 +24,25 @@
         <div class="container header">
             <div class="container-fluid">
                 <div class="container">
-                    <h1 class="display-3">ئاکار</h1>
-                    <p class="lead ">این سایت شخصی برای خودم هست که در اینده به عنوان سایت اصلی و امروز به عنوان رزومه از اون استفاده می‌کنم.</p>
+                    <ul>
+                        <li><a href="">خانه</a></li>
+                        <li><a href="about-me/">درباره من</a></li>
+                        <li><a href="post-list/">پست ها</a></li>
+                        <li><a href="cv/">روزمه</a></li>
+                        {% if not request.user.is_authenticated %}
+                        <li><a href="register/">ساخت حساب کاربری/</a></li>
+                        <li><a href="login/">/ورود به حساب کاربری</a></li>
+                        {% endif %}
+
+                        {% if request.user.is_authenticated %}
+                        <li><a href="admin/">ورود به پنل ادمین</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="container">
+                    <h1 class="display-4"><a href="https://www.zinet.ir/">Zinet | زی‌نت</a></h1>
+                    <p class="lead ">صه سنگ کوچولو یک سنگ کوچولو وسط کوچه ای افتاده بود. هرکسی از کوچه رد ميشد، لگدی به
+                        سنگ میزد و پرتش میکرد یک گوشه ی ديگر. سنگ کوچولو خيلي غمگین بود. تمام بدنش درد میکرد. </p>
                     <br><br>
                 </div>
             </div>
@@ -37,7 +54,7 @@
 
             <div class="clip clip1">
                 <div class="content">
-                    <p>سلام اسم من  {{ name }} نام خوانوادگی {{ last_name }} و اینمل من هست  {{ Email }}</p>
+                    <p>سلام اسم من {{ name }} نام خوانوادگی {{ last_name }} و اینمل من هست {{ Email }}</p>
                 </div>
             </div>
             <div class="clip clip2 ">
@@ -80,8 +97,11 @@
 
     <div class="footer">
         <div class="custom-shape-divider-bottom-1600875552">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
             </svg>
         </div>
         <div class="massege">
@@ -96,7 +116,7 @@
                         class="fab fa-youtube"></i></a>
                 <a href="mailto:benyaminmahmoudyan@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="tel:+989109667550"><i class="fa fa-phone"></i></a>
-    
+
             </div>
         </div>
     </div>
