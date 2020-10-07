@@ -34,7 +34,7 @@
                 <li><a href="register/">ساخت حساب کاربری/</a></li>
                 <li><a href="login/">/ورود به حساب کاربری</a></li>
                 {% endif %}
-    
+
                 {% if request.user.is_authenticated %}
                 <li><a href="admin/">ورود به پنل ادمین</a></li>
                 {% endif %}
@@ -47,34 +47,34 @@
         </div>
         <div class="container">
             <div class="slideshow">
-                <div class="clip clip1">
-                    <div class="content">
-                        <p>هیچ همن جوری دارم یه پیام می‌نویسم برای تست این کلیپ اول است همنین دیگه باید داستان بگم تا
-                            ببینم
-                            ای متن چند خطشد خوب میافته یا نه باید نوشدت و نوشت و خوده نشد من هم دارم می ‌نویتنم تا خوده
-                            نشم
-                        </p>
+
+                <div class="slide">
+                    <div class="box">
+                        <img src="{% static 'Pictuer/pexels-jonas-mohamadi-1416736.jpg' %}" alt="first">
+                        <span>first</span>
+                    </div>
+
+                    <div class="box">
+                        <img src="{% static 'Pictuer/pexels-jonas-mohamadi-1416736.jpg' %}" alt="2nd">
+                        <span>2nd</span>
+                    </div>
+
+                    <div class="box">
+                        <img src="{% static 'Pictuer/pexels-jonas-mohamadi-1416736.jpg' %}" alt="3rd">
+                        <span>3th</span>
+                    </div>
+
+                    <div class="box">
+                        <img src="{% static 'Pictuer/pexels-jonas-mohamadi-1416736.jpg' %}" alt="4th">
+                        <span>4th</span>
                     </div>
                 </div>
-                <div class="clip clip2 ">
-                    <div class="content">
-                        <p>متن دوم برای پیام دوم چیزی به ‌‌ذهنم نمی‌رسه و اگه می‌رسید الان داستنش رو می گفتم مطمئن باش
-                            راست
-                            می ‌گم</p>
-                    </div>
-                </div>
-                <div class="clip clip3 ">
-                    <div class="content">
-                        <p>متن دوم برای پیام دوم چیزی به ‌‌ذهنم نمی‌رسه و اگه می‌رسید الان داستنش رو می گفتم مطمئن باش
-                            راست
-                            می ‌گم</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
     <br>
-    <div class="container-fluid main-container">
+    <div class="container main-container">
         {% for item in qs %}
         <div class="my-home-card card">
             <img class="card-img-top" src="{{ item.image.url }}" alt="card image cap">
@@ -85,6 +85,7 @@
                 <a href="#" class="btn btn-block btn-dark">Go somewhere</a>
             </div>
         </div>
+        <br>
         {% endfor %}
     </div>
 
