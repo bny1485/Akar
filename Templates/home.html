@@ -21,28 +21,28 @@
 <!-- TODO more beautiful reposive slideshow -->
 <!-- TODO card list  -->
 <!-- TODO more beautiful reponsive navebar -->
+
 <body>
-
-    <div class="header-container">
-        <div class="header">
+    <div class="header">
+        <div class="container">
+            <ul>
+                <li><a href="">خانه</a></li>
+                <li><a href="about-me/">درباره من</a></li>
+                <li><a href="post-list/">پست ها</a></li>
+                <li><a href="cv/">روزمه</a></li>
+                {% if not request.user.is_authenticated %}
+                <li><a href="register/">ساخت حساب کاربری/</a></li>
+                <li><a href="login/">/ورود به حساب کاربری</a></li>
+                {% endif %}
+    
+                {% if request.user.is_authenticated %}
+                <li><a href="admin/">ورود به پنل ادمین</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="header-container">
             <div class="container">
-                <h1 class="display-4">Akar | ئاکار</h1>
-            </div>
-            <div class="container">
-                <ul>
-                    <li><a href="">خانه</a></li>
-                    <li><a href="about-me/">درباره من</a></li>
-                    <li><a href="post-list/">پست ها</a></li>
-                    <li><a href="cv/">روزمه</a></li>
-                    {% if not request.user.is_authenticated %}
-                        <li><a href="register/">ساخت حساب کاربری/</a></li>
-                        <li><a href="login/">/ورود به حساب کاربری</a></li>
-                    {% endif %}
-
-                    {% if request.user.is_authenticated %}
-                        <li><a href="admin/">ورود به پنل ادمین</a></li>
-                    {% endif %}
-                </ul>
+                <h1 class="display-4"><a href="https://www.zinet.ir/">Zinet | زی‌نت</a></h1>
             </div>
         </div>
         <div class="container">
@@ -77,38 +77,17 @@
     <div class="container-fluid main-container">
         {% for item in qs %}
         <div class="my-home-card card">
-            <img class="card-img-top" src="{{ qs.image }}" alt="card image cap">
+            <img class="card-img-top" src="{{ item.image.url }}" alt="card image cap">
             <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">{{ qs.date }} ,{{ qs.time }} ,writer</h6>
-                <h5 class="card-title">{{ qs.title }}  </h5>
-                <p class="card-text">{{ qs.description }}</p>
+                <h6 class="card-subtitle mb-2 text-muted">{{ item.date }} ,{{ item.time }} ,writer</h6>
+                <h5 class="card-title">{{ item.title }} </h5>
+                <p class="card-text">{{ item.description }}</p>
                 <a href="#" class="btn btn-block btn-dark">Go somewhere</a>
             </div>
         </div>
         {% endfor %}
     </div>
 
-    <div class="row">
-        <div class="row bottom tags-wrap">
-            <div class="col-full tags">
-                <h3>Tags</h3>
-
-                <div class="tagcloud">
-                    <a href="#0">Salad</a>
-                    <a href="#0">Recipe</a>
-                    <a href="#0">Places</a>
-                    <a href="#0">Tips</a>
-                    <a href="#0">Friends</a>
-                    <a href="#0">Travel</a>
-                    <a href="#0">Exercise</a>
-                    <a href="#0">Reading</a>
-                    <a href="#0">Running</a>
-                    <a href="#0">Self-Help</a>
-                    <a href="#0">Vacation</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <br>
     <br>

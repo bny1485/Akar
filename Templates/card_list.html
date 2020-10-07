@@ -22,23 +22,23 @@
         <h1>I use this div as nav bar</h1>
     </div>
 
+    <br>
+
     <div class="container-fluid main-container">
 
         <div class="container">
-            {% for item in queryset %}
-                <div class="my-home-card card">
-                    <img class="card-img-top" src="{{ queryset.image }}" alt="card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">{{ queryset.date }} ,{{ queryset.time }} ,writer</h6>
-                        <h5 class="card-title">{{ queryset.title }}  </h5>
-                        <p class="card-text">{{ queryset.description }}</p>
-                        <a href="#" class="btn btn-block btn-dark">Go somewhere</a>
-                    </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/home/bny1485/source-code/Akar/Pictuer/thought-catalog-I0TDRP0fj6Y-unsplash.jpg" alt="Pictuer">
+                    
                 </div>
-            {% endfor %}
+            </div>
         </div>
 
     </div>
+
+    <br>
+    <br>
 
     <div class="footer">
         <h1>I use this div footer for sociel media</h1>
