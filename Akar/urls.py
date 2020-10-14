@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import home, about_me, login_def, register_def, CV, Album
-from Post.views import Post_detail, Post_list
+from .views import home, about_me, login_def, register_def, CV
+from Post.views import Post_detail, Album
 
 
 urlpatterns = [
@@ -26,7 +26,6 @@ urlpatterns = [
     path('cv/', CV),
     path('login/', login_def),
     path('register/', register_def),
-    path('album', Album),
-    path('post-list', Post_list.as_view()),
+    path('album/', Album.as_view()),
     path('post-detail/<pk>', Post_detail.as_view())
 ]

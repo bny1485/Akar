@@ -3,10 +3,11 @@ from .models import Post
 from django.views.generic import ListView, DetailView
 
 
-class Post_list(ListView):
+
+class Album(ListView):
     """This function return post list viwe which user can see all post in one or several page"""
     queryset = Post.objects.all()
-    template_name = "card_list.html"
+    template_name = 'Album.html'
 
 
 class Post_detail(DetailView):

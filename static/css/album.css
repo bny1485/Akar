@@ -1,99 +1,73 @@
-.jumbotron {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-bottom: 0;
-  background-color: #fff;
+* {
+    overflow-x: hidden;
 }
+
+bg {
+    background-color: yellowgreen;
+}
+
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
 @media (min-width: 768px) {
-  .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+    .jumbotron {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
 }
 
 .jumbotron p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .jumbotron h1 {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .jumbotron .container {
-  max-width: 40rem;
+    max-width: 40rem;
 }
 
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 footer p {
-  margin-bottom: .25rem;
+    margin-bottom: .25rem;
 }
 
-
-
-/* tagssssssssssssssssssssssssssssssssssssssssssssss */
-
-.s-extra {
-  box-sizing: inherit;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
+ul {
+    float: none;
+    height: 8vh;
+    list-style-type: none;
 }
 
-.tag {
-  font-weight: 400px;
-  background-color: blue;
+li {
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    min-width: 16vh;
+    float: right;
 }
 
-.s-extra .tags-wrap {
-  max-width: 100%;
-}
-.s-extra .tags {
-  height: 100%;
-  text-align: center;
-}
-.s-extra .tagcloud {
-  padding-top: .6rem;
-}
-
-.s-extra .tagcloud a {
-  display: inline-block;
-  font-family: "metropolis-extrabold", sans-serif;
-  font-size: 1.3rem;
-  line-height: 3.4rem;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  padding: 0 2rem;
-  margin: 0 1.2rem 1.5rem 0;
-  border-radius: 3px;
-  background: #e2e2e2;
-  text-decoration: none;
-  color: #333333;
-  position: relative;
+li a {
+    padding-top: 0vh;
+    margin-top: 0vh;
+    padding-top: 12%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
-.tagcloud a:hover, .s-extra .tagcloud a:focus {
-  color: #FFFFFF;
-  background: #151515;
+li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1em;
+    text-decoration-thickness: 0.2em;
+    color: #6ab04c;
 }
-/* 
-@media only screen and (max-width:600px) {
-  * {
-    overflow: hidden;
-  }
-  .s-extra .tags-wrap {
-    max-width: 490px;
-  }
-}
-
-@media only screen and (max-width:992px) {
-  * {
-    overflow: hidden;
-  }
-  .s-extra .tags-wrap {
-    max-width: 850px;
-  }
-} */
