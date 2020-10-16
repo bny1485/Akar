@@ -22,5 +22,7 @@ class Post(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to=image_name, null=True, blank=True)
 
+
     def __str__(self):
+        """ this function return header of post as name of the post at admin page """
         return self.title

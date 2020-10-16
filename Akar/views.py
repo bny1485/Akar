@@ -11,6 +11,7 @@ def home(request):
     context = {
         "qs": my_post
     }
+    print(context)
     return render(request, 'home.html', context)
 
 

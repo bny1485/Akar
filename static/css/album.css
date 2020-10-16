@@ -1,9 +1,12 @@
 * {
     overflow-x: hidden;
+    direction: rtl;
 }
 
-bg {
-    background-color: yellowgreen;
+.my {
+    height: 120px;
+    overflow-y: hidden;
+    text-align: justify;
 }
 
 .jumbotron {
