@@ -11,7 +11,7 @@ def get_filename_ext(file_path):
 def image_name(instance, filename):
     name, ext = get_filename_ext(filename)
     final_name = f"{instance.title}-{instance.id}{ext}"
-    return f"Pictuer/{instance.title}/{final_name}"
+    return f"media/Pictuer/{instance.title}/{final_name}"
 
 
 class Post(models.Model):

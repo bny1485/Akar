@@ -137,18 +137,6 @@ li a:hover {
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1600875552 svg {
-    position: relative;
-    display: block;
-    width: calc(119% + 1.3px);
-    height: 99px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-bottom-1600875552 .shape-fill {
-    fill: #061E22;
-}
-
 .massege {
     min-height: 40vh;
     background-color: #061e22;

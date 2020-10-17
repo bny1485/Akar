@@ -9,6 +9,19 @@
     text-align: justify;
 }
 
+.my-bg {
+    background-color: #eeeeee;
+}
+
+a {
+    color: #061e22;
+}
+
+a:hover {
+    color: #061e22;
+    text-decoration: none;
+}
+
 .jumbotron {
     padding-top: 3rem;
     padding-bottom: 3rem;
