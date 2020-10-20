@@ -1,15 +1,18 @@
-from django.db import models
+""" this is my model  """
 import os
+from django.db import models
 
 
 def get_filename_ext(file_path):
+    """ this function for get image name and extention """
     base_name = os.path.basename(file_path)
-    name, ext = os.path.splitext(base_name)
-    return name, ext
+    ext = os.path.splitext(base_name)
+    return ext
 
 
 def image_name(instance, filename):
-    name, ext = get_filename_ext(filename)
+    """ return uniqe file name for save in database """
+    ext = get_filename_ext(filename)
     final_name = f"{instance.title}-{instance.id}{ext}"
     return f"media/Pictuer/{instance.title}/{final_name}"
 
@@ -19,6 +22,7 @@ class Post(models.Model):
     date = models.DateField()
     time = models.TimeField(auto_now=False)
     title = models.CharField(max_length=50)
+    slug = models.SlugField(blank=False,unique=True)
     description = models.TextField()
     image = models.ImageField(upload_to=image_name, null=True, blank=True)
 

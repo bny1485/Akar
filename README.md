@@ -30,7 +30,8 @@ I keep these todo to remind me of my path
 - [ ] use dynamic tags
 - [ ] Multilingual site
 - [ ] brutefurce attack
-- [ ] split post in home 
-- [ ] More beautiful and efficient
+- [x] split post in home 
+- [x] More beautiful and efficient
 - [ ] get email varification
-- [ ] show image true
+- [x] show image true
+- [ ] lookup search case

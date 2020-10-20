@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- TODO https://medium.com/@Intersog/how-c-is-used-in-big-data-development-d7a03b02ab20 -->
 
     <header>
         <div class="bg-dark">
@@ -31,16 +32,21 @@
             </div>
         </div>
     </header>
+
     <main class="container  col-lg-6">
         <div class="col-lg-offset-6 main-text ">
             <h3>{{ object.title }}</h3>
             <div class="d-flex justify-content-between align-items-center">
                 <small class="text-muted">{{ object.date }} ,{{ object.time }} ,writer</small>
             </div>
+            <div class="col-lg-9">
+                <img src="{{ object.image.url }}" alt="{{ object.title }}">
+            </div>
             <hr>
             <p>{{ object.description }}</p>
         </div>
     </main>
+
     <footer>
 
     </footer>

@@ -30,7 +30,7 @@ urlpatterns = [
     path('login/', login_def),
     path('register/', register_def),
     path('album/', Album.as_view()),
-    path('post/<pk>', Post_detail.as_view())
+    path('post/<slug>', Post_detail.as_view())
 ]
 
 
