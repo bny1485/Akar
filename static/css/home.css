@@ -1,12 +1,20 @@
+* {
+    justify-items: center;
+
+}
+
 body {
-    direction: rtl;
     display: block;
     margin: 0;
     padding: 0;
-    color: snow;
     text-align: right;
     font-family: samim, sans-serif;
     overflow-x: hidden;
+    background-color: #a9dfbf;
+}
+
+img {
+    margin-bottom: 14px;
 }
 
 .header {
@@ -112,40 +120,41 @@ li a:hover {
     height: 100%;
 }
 
-.main-container {
-    align-items: flex-start;
-    color: #333;
-    flex-direction: column;
-    flex-wrap: 1;
-    white-space: normal;
-}
 
-.my-home-card {
-    box-sizing: border-box;
-    text-align: right;
+
+.side-card {
     width: 18rem;
-    box-shadow: 0 4px 28px 0 rgb(105, 131, 148);
+    margin: 10px 0;
 }
 
-.custom-shape-divider-bottom-1600875552 {
-    position: relative;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+@media only screen and (max-width: 992px) {
+    .meta-card {
+        margin: 10px 5px;
+    }
+    .side-card {
+        width: 48%;
+        float: right;
+        margin: 10px 5px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .side-card {
+        width: 100%;
+    }
 }
 
 .massege {
-    min-height: 40vh;
+    padding-top: 5vh;
     background-color: #061e22;
+    min-height: 40vh;
 }
 
 .sm-bg {
     background-color: #061e22;
-    height: 45vh;
+    height: 20vh;
     text-align: center;
+    vertical-align: center;
 }
 
 .sm a {
@@ -188,4 +197,9 @@ li a:hover {
     border-top: 4px solid;
     border-bottom: 4px solid;
     transform: skewY(20deg);
+}
+
+.copy-left {
+    background-color: #061e22;
+    color:snow;
 }
