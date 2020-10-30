@@ -19,6 +19,8 @@ def home(request):
 # TODO get email varification
 USER = get_user_model()
 def register_def(request):
+    if request.user.is_authenticated:
+        return redirect('/')
     Form = RegisterForm(request.POST or None)
     context = {"form": Form}
     if Form.is_valid():
@@ -40,6 +42,8 @@ def register_def(request):
 # TODO brute force attack
 # TODO get email varification
 def login_def(request):
+    if request.user.is_authenticated:
+        return redirect("/")
     Form = LoginForm(request.POST or None)
     context = {"form": Form}
     if Form.is_valid():
