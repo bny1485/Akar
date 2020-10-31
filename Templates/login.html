@@ -4,19 +4,21 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>ورود به حساب کاربری</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/font-samim.css' %}">
+    <meta charset="utf-8">
+    <title>ورود به حساب کاربری</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-samim.css' %}">
 </head>
 
 <body>
-  <form class="box" method="post">
-    {% csrf_token %}
-    <h1>وارد شدن</h1>
-    {{ form }}
-    <input type="submit" name="login" value="وارد شو">
-  </form>
+    <form class="box" method="post">
+        {% csrf_token %}
+        <h1>وارد شدن</h1>
+        {{ form.usr_name }}
+        {{ form.email }}
+        {{ form.passwd }}
+        <input type="submit" name="login" value="وارد شو">
+    </form>
 </body>
 
 </html>

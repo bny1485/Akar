@@ -31,6 +31,7 @@
                 <li><a href="login/">/ورود به حساب کاربری</a></li>
                 {% endif %} {% if request.user.is_authenticated %}
                 <li><a href="admin/">ورود به پنل ادمین</a></li>
+                <li><a href="/admin/logout/"> خروج </a></li>
                 {% endif %}
             </ul>
         </div>
