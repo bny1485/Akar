@@ -19,12 +19,17 @@ def image_name(instance, filename):
 
 class Post(models.Model):
     """ resposible for my post  """
-    date = models.DateField()
-    time = models.TimeField(auto_now=False)
-    title = models.CharField(max_length=50)
-    slug = models.SlugField(blank=False,unique=True)
-    description = models.TextField()
-    image = models.ImageField(upload_to=image_name, null=True, blank=True)
+    date = models.DateField(verbose_name='تاریخ')
+    time = models.TimeField(auto_now=False,verbose_name='زمان')
+    title = models.CharField(max_length=50,verbose_name='عنوان')
+    slug = models.SlugField(blank=False,unique=True,verbose_name='عنوان url')
+    description = models.TextField(verbose_name='توضیحات')
+    image = models.ImageField(upload_to=image_name, null=True, blank=True,verbose_name='عکس')
+
+    class Meta():
+        verbose_name = 'پست'
+        verbose_name_plural = 'پست ها'
+
 
 
     def __str__(self):
