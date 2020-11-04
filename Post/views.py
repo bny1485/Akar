@@ -7,6 +7,7 @@ class Album(ListView):
     """This function return post list viwe which user can see all post in one or several page"""
     queryset = Post.objects.all()
     template_name = 'Album.html'
+    paginate_by = 9
 
 
 class Post_detail(DetailView):
