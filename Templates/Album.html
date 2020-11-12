@@ -28,6 +28,18 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-lg-3 meta-card">
+                <div class="side-card card bg-white shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">جستوجو</h5>
+                        <form action="/post/search" method="GET">
+                            <input class="form-control mb-1" type="search" placeholder="جستوجو" aria-label="Search"
+                                value="{{ request.GET.q }}" name="q">
+                            <button type="button" class="btn btn-block" type="submit">بگرد</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -57,12 +69,12 @@
                     {% endif %}
 
                     {% for page in paginator.page_range %}
-                        <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
                     {% endfor %}
                     {% for page in paginator.page_range %}
-                        {% if page == page_obj.number %}
-                            <li class="active page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
-                        {% endif %}
+                    {% if page == page_obj.number %}
+                    <li class="active page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                    {% endif %}
                     {% endfor %}
 
 

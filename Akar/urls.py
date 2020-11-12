@@ -17,7 +17,7 @@ from django.views.static import serve
 from django.contrib import admin
 from django.urls import path, re_path
 from .views import home, about_me, login_def, register_def, CV
-from Post.views import Post_detail, Album
+from Post.views import Post_detail, Album, search_in_post
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -25,6 +25,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('post/search', search_in_post.as_view()),
     path('about-me/', about_me),
     path('cv/', CV),
     path('login/', login_def),
