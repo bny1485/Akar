@@ -15,6 +15,7 @@ class Post_detail(DetailView):
     queryset = Post.objects.all()
     template_name = "post_detail.html"
 
+
     def get_context_data(self, *args, objects_list=None, **kwargs):
         context = super(Post_detail, self).get_context_data(*args, **kwargs)
         context['abc'] = "my name is Benyamin"
