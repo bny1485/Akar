@@ -3,13 +3,16 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import RegisterForm, LoginForm
 from Post.models import Post as MyPost
+from tag.models import Tag
 
 
 def home(request):
     """ This function is responsible for home page """
     my_post = MyPost.objects.all()
+    tag = Tag.objects.all()
     context = {
-        "qs": my_post
+        "qs": my_post,
+        "tag": tag
     }
     print(context)
     return render(request, 'home.html', context)

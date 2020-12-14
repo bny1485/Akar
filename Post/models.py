@@ -2,6 +2,7 @@
 import os
 from django.db import models
 from django.db.models import Q
+from tag.models import Tag
 
 
 def get_filename_ext(file_path):
@@ -21,7 +22,11 @@ def image_name(instance, filename):
 class PostManger(models.Manager):
 
     def search(self, query):
-        lookup = Q(title__icontains=query) | Q(description__icontains=query)
+        lookup = (
+            Q(title__icontains=query) |
+            Q(description__icontains=query) |
+            Q(tag__title__icontains=query)
+        )
         return self.get_queryset().filter(lookup).distinct()
 
 
@@ -35,6 +40,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to=image_name,
                               null=True, blank=True, verbose_name='عکس')
 
+    PostTag = models.ManyToManyField(Tag, blank=True, null=True)
     objects = PostManger()
 
     class Meta():
