@@ -24,8 +24,7 @@ class PostManger(models.Manager):
     def search(self, query):
         lookup = (
             Q(title__icontains=query) |
-            Q(description__icontains=query) |
-            Q(tag__title__icontains=query)
+            Q(description__icontains=query)
         )
         return self.get_queryset().filter(lookup).distinct()
 
@@ -37,10 +36,9 @@ class Post(models.Model):
     title = models.CharField(max_length=50, verbose_name='عنوان')
     slug = models.SlugField(blank=False, unique=True, verbose_name='عنوان url')
     description = models.TextField(verbose_name='توضیحات')
-    image = models.ImageField(upload_to=image_name,
-                              null=True, blank=True, verbose_name='عکس')
+    image = models.ImageField(upload_to=image_name, null=True, blank=True, verbose_name='عکس')
 
-    PostTag = models.ManyToManyField(Tag, blank=True, null=True)
+    PostTag = models.ManyToManyField(Tag, blank=True)
     objects = PostManger()
 
     class Meta():

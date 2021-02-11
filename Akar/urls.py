@@ -16,7 +16,7 @@ Including another URLconf
 from django.views.static import serve
 from django.contrib import admin
 from django.urls import path, re_path
-from .views import home, about_me, login_def, register_def, CV
+from .views import home, about_me, login_def, register_def, CV, logout_function
 from Post.views import Post_detail, Album, search_in_post
 from django.conf import settings
 from django.conf.urls.static import static
@@ -29,6 +29,7 @@ urlpatterns = [
     path('about-me/', about_me),
     path('cv/', CV),
     path('login/', login_def),
+    path('logout/', logout_function),
     path('register/', register_def),
     path('album/', Album.as_view()),
     path('post/<slug>', Post_detail.as_view())

@@ -32,10 +32,11 @@
                 <div class="side-card card bg-white shadow-lg">
                     <div class="card-body">
                         <h5 class="card-title">جستوجو</h5>
-                        <form action="/post/search" method="GET">
+                        <form action="/post/search" method="get">
+                            {% csrf_token %}
                             <input class="form-control mb-1" type="search" placeholder="جستوجو" aria-label="Search"
                                 value="{{ request.GET.q }}" name="q">
-                            <button type="button" class="btn btn-block" type="submit">بگرد</button>
+                            <button class="btn btn-block" type="submit">بگرد</button>
                         </form>
                     </div>
                 </div>

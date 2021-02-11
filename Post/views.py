@@ -7,7 +7,7 @@ class Album(ListView):
     """This function return post list viwe which user can see all post in one or several page"""
     queryset = Post.objects.all()
     template_name = 'Album.html'
-    paginate_by = 9
+    paginate_by = 6
 
 
 class Post_detail(DetailView):
@@ -19,7 +19,6 @@ class Post_detail(DetailView):
     def get_context_data(self, *args, objects_list=None, **kwargs):
         context = super(Post_detail, self).get_context_data(*args, **kwargs)
         context['abc'] = "my name is Benyamin"
-        print(context)
         return context
 
 
@@ -34,4 +33,4 @@ class search_in_post(ListView):
         if search_query is not None:
             return Post.objects.search(search_query)
 
-        return Post.objects.none()
+        return Post.objects.all()

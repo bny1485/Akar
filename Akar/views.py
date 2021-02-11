@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth import authenticate, login, get_user_model, logout
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import RegisterForm, LoginForm
@@ -14,13 +14,14 @@ def home(request):
         "qs": my_post,
         "tag": tag
     }
-    print(context)
     return render(request, 'home.html', context)
 
 
 # TODO if user is login can not come to this function
 # TODO get email varification
 USER = get_user_model()
+
+
 def register_def(request):
     if request.user.is_authenticated:
         return redirect('/')
@@ -50,7 +51,6 @@ def login_def(request):
     Form = LoginForm(request.POST or None)
     context = {"form": Form}
     if Form.is_valid():
-        print(Form.cleaned_data)
         USR_NAME = Form.cleaned_data.get("usr_name")
         PASSWD = Form.cleaned_data.get("passwd")
         user = authenticate(request, username=USR_NAME, password=PASSWD)
@@ -62,6 +62,12 @@ def login_def(request):
             print("user is None.\nI am in else")
 
     return render(request, 'login.html', context)
+
+
+def logout_function(request):
+    if request.user.is_authenticated:
+        logout(request)
+    return redirect('/')
 
 
 def about_me(request):
